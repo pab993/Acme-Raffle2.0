@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+ * security.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"	
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd		
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd
+    ">
+
+	<!-- Security infrastructure -->
+
+	<bean id="loginService" class="security.LoginService" />
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+
+	<!-- Access control -->
+
+	<security:http auto-config="true" use-expressions="true">
+		<security:intercept-url pattern="/" access="permitAll" /> 
+
+		<security:intercept-url pattern="/favicon.ico" access="permitAll" /> 
+		<security:intercept-url pattern="/images/**" access="permitAll" /> 
+		<security:intercept-url pattern="/scripts/**" access="permitAll" /> 
+		<security:intercept-url pattern="/styles/**" access="permitAll" /> 
+		
+		<security:intercept-url pattern="/welcome/cookies.do" access="permitAll" />
+		<security:intercept-url pattern="/welcome/conditions.do" access="permitAll" />
+		<security:intercept-url pattern="/termAndCondition/termAndCondition.do" access="permitAll" />
+		<security:intercept-url pattern="/welcome/eraseMe.do" access="permitAll" />
+		<security:intercept-url pattern="/raffle/search.do" access="permitAll" />
+		<security:intercept-url pattern="/views/misc/index.jsp" access="permitAll" /> 
+
+		<security:intercept-url pattern="/security/login.do" access="permitAll" /> 
+		<security:intercept-url pattern="/security/loginFailure.do" access="permitAll" /> 
+		
+		<security:intercept-url pattern="/welcome/index.do" access="permitAll" />
+		<security:intercept-url pattern="/raffle/browse.do" access="permitAll" />
+		
+		<security:intercept-url pattern="/actor/registerUser.do" access="isAnonymous()" /> 
+		<security:intercept-url pattern="/actor/registerManager.do" access="isAnonymous()" /> 
+		<security:intercept-url pattern="/actor/registerAuditor.do" access="isAnonymous()" /> 
+		
+	  	<security:intercept-url pattern="/actor/seeProfile.do" access="permitAll" /> 
+	  	<security:intercept-url pattern="/actor/seeProfileUnregistered.do" access="permitAll" /> 
+  		<security:intercept-url pattern="/actor/editProfile.do" access="isAuthenticated()" /> 
+  		
+  		<!-- <security:intercept-url pattern="/message/**" access="isAuthenticated()" /> 
+ 		<security:intercept-url pattern="/folder/**" access="isAuthenticated()" /> -->
+ 		<security:intercept-url pattern="/socialIdentity/**" access="isAuthenticated()" /> 
+ 		
+ 		<security:intercept-url pattern="/comment/postComment.do" access="isAuthenticated()" /> 
+  		<!-- <security:intercept-url pattern="/comment/ban.do" access="hasRole('ADMIN')" /> -->
+  		<security:intercept-url pattern="/prize/editProperty.do" access="hasRole('ADMIN')" />
+  		<security:intercept-url pattern="/manager/prize/**" access="hasRole('MANAGER')" />
+  		<security:intercept-url pattern="/manager/property/**" access="hasRole('MANAGER')" />
+  		<security:intercept-url pattern="/admin/comment/**" access="hasRole('ADMIN')" />
+  		
+  		<security:intercept-url pattern="/property/listByPrize.do" access="permitAll" />
+  		<security:intercept-url pattern="/property/list.do" access="hasRole('ADMIN')" /> 
+  		<security:intercept-url pattern="/property/create.do" access="hasRole('ADMIN')" /> 
+  		<security:intercept-url pattern="/property/edit.do" access="hasRole('ADMIN')" /> 
+  			
+  		<security:intercept-url pattern="/tabooWord/list.do" access="hasRole('ADMIN')" /> 
+  		<security:intercept-url pattern="/tabooWord/create.do" access="hasRole('ADMIN')" /> 
+  		<security:intercept-url pattern="/tabooWord/edit.do" access="hasRole('ADMIN')" /> 	
+  		
+  		<security:intercept-url pattern="/configurationSystem/edit.do" access="hasRole('ADMIN')" /> 
+  		
+  		<security:intercept-url pattern="/dashboard/list.do" access="hasRole('ADMIN')" /> 
+  		
+  		<security:intercept-url pattern="/admin/user/**" access="hasRole('ADMIN')" /> 
+  		<security:intercept-url pattern="/admin/manager/**" access="hasRole('ADMIN')" /> 
+  		
+  		<security:intercept-url pattern="/raffle/myListUser.do" access="hasRole('USER')" />
+  		<security:intercept-url pattern="/raffle/myList.do" access="hasRole('MANAGER')" /> 
+  		<security:intercept-url pattern="/raffle/edit.do" access="hasRole('MANAGER')" /> 
+  		<security:intercept-url pattern="/raffle/create.do" access="hasRole('MANAGER')" /> 
+  		<security:intercept-url pattern="/raffle/display.do" access="permitAll" /> 
+  		
+  		<security:intercept-url pattern="/prize/myList.do" access="hasRole('USER')" /> 
+  		<security:intercept-url pattern="/prize/list.do" access="permitAll" /> 
+  		<security:intercept-url pattern="/prize/edit.do" access="hasRole('MANAGER')" /> 
+
+  		<security:intercept-url pattern="/prize/editPrize.do" access="hasRole('MANAGER')" /> 
+  		<security:intercept-url pattern="/prize/regenerateCode.do" access="hasRole('MANAGER')" />   		  		
+
+  		<security:intercept-url pattern="/prize/create.do" access="hasRole('MANAGER')" /> 
+  		<security:intercept-url pattern="/prize/display.do" access="permitAll" /> 
+  		
+  		<security:intercept-url pattern="/code/listByPrize.do" access="hasRole('MANAGER')" />
+  		<security:intercept-url pattern="/code/edit.do" access="hasRole('MANAGER')" />  
+  		<security:intercept-url pattern="/code/myList.do" access="hasRole('USER')" /> 
+  		<security:intercept-url pattern="/code/enter.do" access="hasRole('USER')" /> 
+
+   		<security:intercept-url pattern="/audit/myList.do" access="hasRole('AUDITOR')" /> 
+  		<security:intercept-url pattern="/audit/edit.do" access="hasRole('AUDITOR')" /> 
+  		<security:intercept-url pattern="/audit/create.do" access="hasRole('AUDITOR')" /> 
+  		<security:intercept-url pattern="/audit/notDraft.do" access="hasRole('AUDITOR')" />
+  		
+  		<security:intercept-url pattern="/creditCard/**" access="hasRole('MANAGER')" /> 
+  		
+  		<security:intercept-url pattern="/bill/list.do" access="hasRole('MANAGER')" /> 
+  		<security:intercept-url pattern="/bill/pay.do" access="hasRole('MANAGER')" /> 
+  
+  		<security:intercept-url pattern="/bill/listAll.do" access="hasRole('ADMIN')" /> 
+  		<security:intercept-url pattern="/bill/compute.do" access="hasRole('ADMIN')" /> 
+  		 
+
+		<security:intercept-url pattern="/**" access="hasRole('NONE')" />
+
+		<security:form-login 
+			login-page="/security/login.do"
+			password-parameter="password" 
+			username-parameter="username"
+			authentication-failure-url="/security/loginFailure.do" />
+
+		<security:logout 
+			logout-success-url="/" 
+			invalidate-session="true" />
+	</security:http>
+
+</beans>

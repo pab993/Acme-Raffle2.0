@@ -1,0 +1,18 @@
+delete.property					= Eliminar
+
+property.name					= Nombre
+add.property					= Añadir
+
+prize.error.addProperty			= No se puede añadir
+prize.error.deleteProperty		= No se puede eliminar
+prize.errorDefault				= Error
+
+property.edit					= Editar
+property.create					= Crear
+
+property.delete					= Borrar
+property.save					= Guardar
+property.cancel					= Cancelar
+
+property.confirm   				= Are you sure to delete this property?
+property.commit.error 			= Cannot commit this operation

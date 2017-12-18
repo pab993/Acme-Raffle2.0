@@ -1,0 +1,191 @@
+
+package controllers;
+
+import java.util.Collection;
+import java.util.Date;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.util.Assert;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
+import services.BillService;
+import services.ConfigurationSystemService;
+import services.ManagerService;
+import domain.Bill;
+import domain.Manager;
+import forms.BillForm;
+
+@Controller
+@RequestMapping("/bill")
+public class BillController extends AbstractController {
+
+	// Services
+	// ============================================================================
+
+	@Autowired
+	private BillService					billService;
+
+	@Autowired
+	private ManagerService				managerService;
+
+	//	@Autowired
+	//	private ActorService				actorService;
+
+	@Autowired
+	private ConfigurationSystemService	configurationSystemService;
+
+
+	//Listing
+	// ============================================================================
+
+	@RequestMapping(value = "/list", method = RequestMethod.GET)
+	public ModelAndView list(@RequestParam(defaultValue = "0", required = false) final int errorMessage) {
+		ModelAndView result;
+		Collection<Bill> bills;
+		final Manager manager = this.managerService.findByPrincipal();
+
+		bills = this.billService.findAllByManager(manager);
+
+		result = new ModelAndView("bill/list");
+		result.addObject("bills", bills);
+		result.addObject("manager", manager);
+		result.addObject("now", new Date(System.currentTimeMillis()));
+		result.addObject("requestURI", "bill/list.do");
+
+		this.error(result, errorMessage);
+		return result;
+	}
+
+	@RequestMapping(value = "/listAll", method = RequestMethod.GET)
+	public ModelAndView listAll(@RequestParam(defaultValue = "0", required = false) final int errorMessage) {
+		ModelAndView result;
+		Collection<Bill> bills;
+
+		bills = this.billService.findAllComputed();
+
+		result = new ModelAndView("bill/list");
+		result.addObject("bills", bills);
+		result.addObject("requestURI", "bill/listAll.do");
+
+		this.error(result, errorMessage);
+		return result;
+	}
+
+	@RequestMapping(value = "/pay", method = RequestMethod.GET)
+	public ModelAndView pay(@RequestParam final int billId, @RequestParam(defaultValue = "0", required = false) final int errorMessage) {
+		ModelAndView res;
+
+		try {
+
+			final Bill bill = this.billService.findOne(billId);
+			Assert.notNull(bill);
+			Assert.isTrue(bill.getRaffle().getManager().getId() == this.managerService.findByPrincipal().getId());
+
+			res = new ModelAndView();
+
+			try {
+				this.billService.pay(bill);
+
+				res.setViewName("redirect:/bill/list.do");
+			} catch (final Throwable oops) {
+				res = new ModelAndView("redirect:/bill/list.do?errorMessage=2");
+			}
+			this.error(res, errorMessage);
+
+		} catch (final Throwable oops) {
+
+			res = new ModelAndView("redirect:/panic/misc.do");
+
+		}
+		return res;
+	}
+
+	@RequestMapping(value = "/compute", method = RequestMethod.GET)
+	public ModelAndView enter() {
+		ModelAndView result;
+
+		final BillForm billForm = new BillForm();
+
+		billForm.setComputeDate(new Date());
+		billForm.setPayMomentCS(this.configurationSystemService.getCS().getPayMoment());
+
+		result = new ModelAndView("bill/compute");
+		result.addObject("billForm", billForm);
+
+		return result;
+
+	}
+	@RequestMapping(value = "/compute", method = RequestMethod.POST, params = "save")
+	public ModelAndView save(@Valid final BillForm billForm, final BindingResult binding) {
+		ModelAndView result;
+
+		if (binding.hasErrors())
+			result = this.createEditModelAndView(billForm);
+		else
+			try {
+
+				this.billService.computeBills(billForm);
+
+				result = new ModelAndView("redirect:/bill/listAll.do");
+
+			} catch (final Throwable oops) {
+				result = this.createEditModelAndView(billForm, "code.commit.error");
+			}
+
+		return result;
+	}
+
+	//	public ModelAndView compute() {
+	//		ModelAndView res;
+	//
+	//		res = new ModelAndView();
+	//
+	//		this.billService.compute();
+	//
+	//		res.setViewName("redirect:/bill/listAll.do");
+	//
+	//		return res;
+	//	}
+
+	// Ancilliary methods
+	// =================================================================================================
+
+	protected ModelAndView createEditModelAndView(final BillForm billForm) {
+		ModelAndView result;
+
+		result = this.createEditModelAndView(billForm, null);
+
+		return result;
+	}
+
+	protected ModelAndView createEditModelAndView(final BillForm billForm, final String message) {
+		ModelAndView result;
+
+		result = new ModelAndView("bill/compute");
+
+		result.addObject("billForm", billForm);
+		result.addObject("message", message);
+
+		return result;
+	}
+
+	private void error(final ModelAndView result, final int errorMessage) {
+		if (errorMessage != 0)
+			switch (errorMessage) {
+			case 2:
+				result.addObject("errorMessage", "bill.error.creditCard");
+				break;
+			default:
+				result.addObject("errorMessage", "subject.errorDefault");
+				break;
+			}
+	}
+
+}

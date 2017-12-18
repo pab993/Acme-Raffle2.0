@@ -1,0 +1,23 @@
+socialIdentity.edit				= Editar
+socialIdentity.create			= Crear una nueva identidad social
+socialIdentity.delete 			= Borrar
+
+socialIdentity.nick				= Nick
+socialIdentity.socialNetwork	= Red Social
+socialIdentity.link				= Link
+socialIdentity.photo			= Foto
+
+
+socialIdentity.save				= Guardar
+socialIdentity.cancel			= Cancelar
+
+socialIdentity.commit.error		= No se puede completar su operación
+socialIdentity.confirm.delete	= ¿Eliminar esta identidad social?
+
+
+socialIdentity.putDelete = Borrar
+socialIdentity.confirm.putDelete = Realmente quiero eliminar esta identidad social
+
+socialIdentity.commit.error	= Error
+
+socialIdentity.confirm.delete  = ¿Estas seguro que quiere eliminarlo?

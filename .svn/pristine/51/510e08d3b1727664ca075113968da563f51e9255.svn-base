@@ -1,0 +1,36 @@
+prize.name				= Name
+prize.description		= Description
+prize.codesGenerated	= Number of codes to generate
+prize.winnerCodes		= Number of winner codes
+
+prize.save.error		= Can't complete your action. Remember that once the raffle has started, it is not possible to modify your prize/s and that the number of codes to be generated must be greater than the number of winning codes.
+prize.delete.error		= You can not delete this prize. Remember that once the raffle has started, it is not possible to modify your prize/s
+prize.confirm.delete	= Are you sure you wish to delete this prize?
+
+prize.regenerateCode	= Regenerating codes
+
+comentable.ratioStars			= Average number of stars
+comment.title 					= Title
+comment.text 					= Text
+comment.stars 					= Stars
+comment.userName				= UserName
+
+prize.codes				= Codes
+prize.display			= Display
+prize.create			= Create a new prize
+prize.edit				= Edit
+prize.save				= Save
+prize.delete			= Delete
+prize.cancel			= Cancel
+prize.properties		= Properties
+prize.addProperties		= Add Properties
+prize.codeForm			= Enter Code
+prize.enterCode			= Code
+
+
+listCodeByPrizeAndUser 	= Codes
+enterACode				= Enter a code
+
+property.name			= Nombre
+createPrize				= Create prize
+prize.raffle.enterCode  = Enter code

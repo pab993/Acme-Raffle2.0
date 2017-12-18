@@ -1,0 +1,29 @@
+# messages_es.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+actorRegister.accountData				= Datos de la nueva cuenta
+actorRegister.username					= Nombre de usuario
+actorRegister.password					= Contraseña
+actorRegister.repeatPassword			= Repetir contraseña
+actorRegister.personalData				= Datos personales
+actorRegister.name						= Nombre
+actorRegister.surname					= Apellidos
+actorRegister.phone						= Número de teléfono
+actorRegister.email						= Correo electrónico
+actorRegister.postalAddress				= Dirección postal
+actorRegister.accept					= Acepto
+actorRegister.lopd						= Términos y condiciones
+actorRegister.submit					= Registrarse
+
+actorRegister.password.mismatch			= Las contraseñas no pueden estar en blanco y deben coincidir
+actorRegister.postalAddress.error		= El patrón del código postal no es correcto
+actorRegister.phone.error				= El patrón del teléfono no es correcto
+actorRegister.save.error				= No se ha podido realizar esta operación
+
+phone.ask								= Este teléfono no cumple el patrón recomendado. ¿Seguro que quiere introducir este valor?
+actorRegister.username.unique			= El nombre de usuario debe ser único.

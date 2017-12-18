@@ -1,0 +1,19 @@
+bill.name					= Nombre
+bill.payMoment				= Fecha para pagar
+bill.price					= Precio
+bill.raffle					= Rifa
+bill.manager				= Gerente
+bill.paid					= Pagado
+bill.not.paid				= No pagado
+pay.bill					= Pagar
+bill.save					= Guardar	
+bill.cancell				= Cancelar
+compute.input				= Entrada
+bill.compute				= Computar
+bill.computeDate			= Fecha de creación
+
+lastCompute					= Ultimo calculo
+
+bill.sure.pay				= Usted va a pagar esta factura con la tarjeta de credito que tiene registrada en este momento. ¿Está seguro de que desea continuar?
+bill.error.creditCard		= Compruebe que su tarjeta de crédito sea válida.
+bill.payMoment.info			= Recuerde que ya ha computado las facturas hasta la fecha indicada en -Ultimo calculo-. ¿Está seguro de que desea continuar?

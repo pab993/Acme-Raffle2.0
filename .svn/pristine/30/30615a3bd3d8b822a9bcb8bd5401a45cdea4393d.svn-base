@@ -1,0 +1,26 @@
+
+package converters;
+
+import javax.transaction.Transactional;
+
+import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
+
+import domain.Bill;
+
+@Component
+@Transactional
+public class BillToStringConverter implements Converter<Bill, String> {
+
+	@Override
+	public String convert(final Bill bill) {
+
+		String result;
+		if (bill == null)
+			result = null;
+		else
+			result = String.valueOf(bill.getId());
+		return result;
+	}
+
+}

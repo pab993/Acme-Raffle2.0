@@ -1,0 +1,1363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- * PopulateDatabase.xml * * Copyright (C) 2017 Universidad de Sevilla 
+	* * The use of this project is hereby constrained to the conditions of the 
+	* TDG Licence, a copy of which you may download from * http://www.tdg-seville.info/License.html -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	">
+
+	<!-- User accounts -->
+
+	<bean id="userAccount1" class="security.UserAccount">
+		<property name="username" value="admin" />
+		<property name="password" value="21232f297a57a5a743894a0e4a801fc3" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="ADMIN" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount2" class="security.UserAccount">
+		<property name="username" value="manager1" />
+		<property name="password" value="c240642ddef994358c96da82c0361a58" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount3" class="security.UserAccount">
+		<property name="username" value="manager2" />
+		<property name="password" value="8df5127cd164b5bc2d2b78410a7eea0c" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount4" class="security.UserAccount">
+		<property name="username" value="manager3" />
+		<property name="password" value="2d3a5db4a2a9717b43698520a8de57d0" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount5" class="security.UserAccount">
+		<property name="username" value="manager4" />
+		<property name="password" value="e1ec6fc941af3ba79a4ac5242dd39735" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="MANAGER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount6" class="security.UserAccount">
+		<property name="username" value="auditor1" />
+		<property name="password" value="175d2e7a63f386554a4dd66e865c3e14" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="AUDITOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount7" class="security.UserAccount">
+		<property name="username" value="auditor2" />
+		<property name="password" value="04dd94ba3212ac52ad3a1f4cbfb52d4f" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="AUDITOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount8" class="security.UserAccount">
+		<property name="username" value="auditor3" />
+		<property name="password" value="fc2073dbe4f65dfd71e46602f8e6a5f3" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="AUDITOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount9" class="security.UserAccount">
+		<property name="username" value="auditor4" />
+		<property name="password" value="6cc8affcba51a854192a33af68c08f49" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="AUDITOR" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount10" class="security.UserAccount">
+		<property name="username" value="user1" />
+		<property name="password" value="24c9e15e52afc47c225b757e7bee1f9d" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount11" class="security.UserAccount">
+		<property name="username" value="user2" />
+		<property name="password" value="7e58d63b60197ceb55a1c487989a3720" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount12" class="security.UserAccount">
+		<property name="username" value="user3" />
+		<property name="password" value="92877af70a45fd6a2ed7fe81e1236b78" />
+		<property name="enabled" value="false" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="userAccount13" class="security.UserAccount">
+		<property name="username" value="user4" />
+		<property name="password" value="3f02ebe3d7929b091e3d8ccfde2f3bc6" />
+		<property name="enabled" value="true" />
+		<property name="authorities">
+			<list>
+				<bean class="security.Authority">
+					<property name="authority" value="USER" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+
+	<!-- ADMINISTRATORS -->
+	<bean id="admin" class="domain.Administrator">
+		<property name="name" value="NameAdmin" />
+		<property name="surname" value="SurnameAdmin" />
+		<property name="phone" value="+ES647382899" />
+		<property name="email" value="admin@admin.com" />
+		<property name="postalAddress" value="41008" />
+		<property name="city" value="city1" />
+		<property name="country" value="country1" />
+		<property name="userAccount" ref="userAccount1" />
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- MANAGERS -->
+	<bean id="manager1" class="domain.Manager">
+		<property name="name" value="NameManager1" />
+		<property name="surname" value="SurnameManager1" />
+		<property name="phone" value="+ES647382895" />
+		<property name="email" value="manager1@admin.com" />
+		<property name="postalAddress" value="11100" />
+		<property name="city" value="city2" />
+		<property name="country" value="country2" />
+		<property name="userAccount" ref="userAccount2" />
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="raffles">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="manager2" class="domain.Manager">
+		<property name="name" value="NameManager2" />
+		<property name="surname" value="SurnameManager2" />
+		<property name="phone" value="+ES647952895" />
+		<property name="email" value="manager2@admin.com" />
+		<property name="postalAddress" value="11010" />
+		<property name="city" value="city3" />
+		<property name="country" value="country3" />
+		<property name="userAccount" ref="userAccount3" />
+		<property name="raffles">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="manager3" class="domain.Manager">
+		<property name="name" value="NameManager3" />
+		<property name="surname" value="SurnameManager3" />
+		<property name="phone" value="+ES694752895" />
+		<property name="email" value="manager3@admin.com" />
+		<property name="postalAddress" value="11120" />
+		<property name="city" value="city4" />
+		<property name="country" value="country4" />
+		<property name="userAccount" ref="userAccount4" />
+		<property name="raffles">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="manager4" class="domain.Manager">
+		<property name="name" value="NameManager4" />
+		<property name="surname" value="SurnameManager4" />
+		<property name="phone" value="+ES647382895" />
+		<property name="email" value="manager4@admin.com" />
+		<property name="postalAddress" value="20100" />
+		<property name="city" value="city5" />
+		<property name="country" value="country5" />
+		<property name="userAccount" ref="userAccount5" />
+		<property name="raffles">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- AUDITOR -->
+	<bean id="auditor1" class="domain.Auditor">
+		<property name="name" value="NameAuditor1" />
+		<property name="surname" value="SurnameAuditor1" />
+		<property name="phone" value="+ES647382895" />
+		<property name="email" value="auditor1@admin.com" />
+		<property name="postalAddress" value="11100" />
+		<property name="city" value="city6" />
+		<property name="country" value="country6" />
+		<property name="userAccount" ref="userAccount6" />
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="auditor2" class="domain.Auditor">
+		<property name="name" value="NameAuditor2" />
+		<property name="surname" value="SurnameAuditor2" />
+		<property name="phone" value="+ES647952895" />
+		<property name="email" value="auditor2@admin.com" />
+		<property name="postalAddress" value="11010" />
+		<property name="city" value="city7" />
+		<property name="country" value="country7" />
+		<property name="userAccount" ref="userAccount7" />
+		<property name="audits">
+			<list>
+
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="auditor3" class="domain.Auditor">
+		<property name="name" value="NameAuditor3" />
+		<property name="surname" value="SurnameAuditor3" />
+		<property name="phone" value="+ES694752895" />
+		<property name="email" value="auditor3@admin.com" />
+		<property name="postalAddress" value="11120" />
+		<property name="city" value="city8" />
+		<property name="country" value="country8" />
+		<property name="userAccount" ref="userAccount8" />
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="auditor4" class="domain.Auditor">
+		<property name="name" value="NameAuditor4" />
+		<property name="surname" value="SurnameAuditor4" />
+		<property name="phone" value="+ES647382895" />
+		<property name="email" value="auditor4@admin.com" />
+		<property name="postalAddress" value="20100" />
+		<property name="city" value="city9" />
+		<property name="country" value="country9" />
+		<property name="userAccount" ref="userAccount9" />
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- USERS -->
+
+	<bean id="user1" class="domain.User">
+		<property name="name" value="NameUser1" />
+		<property name="surname" value="SurnameUser1" />
+		<property name="phone" value="+ES647654899" />
+		<property name="email" value="user1@admin.com" />
+		<property name="postalAddress" value="43508" />
+		<property name="city" value="city1" />
+		<property name="country" value="country1" />
+		<property name="userAccount" ref="userAccount10" />
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="codes">
+			<list>
+				<ref bean="code9" />
+				<ref bean="code10" />
+			</list>
+		</property>
+	</bean>
+
+
+	<bean id="user2" class="domain.User">
+		<property name="name" value="NameUser2" />
+		<property name="surname" value="SurnameUser2" />
+		<property name="phone" value="+ES647004899" />
+		<property name="email" value="user2@admin.com" />
+		<property name="postalAddress" value="43028" />
+		<property name="city" value="city2" />
+		<property name="country" value="country2" />
+		<property name="userAccount" ref="userAccount11" />
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="codes">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="user3" class="domain.User">
+		<property name="name" value="NameUser3" />
+		<property name="surname" value="SurnameUser3" />
+		<property name="phone" value="+ES637654899" />
+		<property name="email" value="user3@admin.com" />
+		<property name="postalAddress" value="43509" />
+		<property name="city" value="city3" />
+		<property name="country" value="country3" />
+		<property name="userAccount" ref="userAccount12" />
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="codes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<bean id="user4" class="domain.User">
+		<property name="name" value="NameUser4" />
+		<property name="surname" value="SurnameUser4" />
+		<property name="phone" value="+ES667654899" />
+		<property name="email" value="user4@admin.com" />
+		<property name="postalAddress" value="73508" />
+		<property name="city" value="city4" />
+		<property name="country" value="country4" />
+		<property name="userAccount" ref="userAccount13" />
+		<property name="socialIdentities">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="codes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+	</bean>
+
+	<!-- SOCIAL IDENTITIES -->
+
+	<bean id="socialIdentity1" class="domain.SocialIdentity">
+		<property name="nick" value="social identity admin" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="admin" />
+	</bean>
+
+	<bean id="socialIdentity2" class="domain.SocialIdentity">
+		<property name="nick" value="social identity manager1" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="manager1" />
+	</bean>
+
+	<bean id="socialIdentity3" class="domain.SocialIdentity">
+		<property name="nick" value="social identity manager3" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="manager3" />
+	</bean>
+
+	<bean id="socialIdentity4" class="domain.SocialIdentity">
+		<property name="nick" value="social identity auditor2" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="auditor2" />
+	</bean>
+
+	<bean id="socialIdentity5" class="domain.SocialIdentity">
+		<property name="nick" value="social identity auditor4" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="auditor4" />
+	</bean>
+
+	<bean id="socialIdentity6" class="domain.SocialIdentity">
+		<property name="nick" value="social identity user1" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="user1" />
+	</bean>
+
+	<bean id="socialIdentity7" class="domain.SocialIdentity">
+		<property name="nick" value="social identity user4" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="user4" />
+	</bean>
+
+	<bean id="socialIdentity8" class="domain.SocialIdentity">
+		<property name="nick" value="social identity user1.1" />
+		<property name="profile" value="https://es.linkedin.com/" />
+		<property name="actor" ref="user1" />
+	</bean>
+
+	<!-- RAFFLES -->
+
+	<bean id="raffle1" class="domain.Raffle">
+		<property name="logo"
+			value="https://vignette1.wikia.nocookie.net/conworld/images/c/c1/Pepa-Cola.jpg" />
+		<property name="title" value="The Pepa-Cola Vacation" />
+		<property name="description" value="description raffle 1" />
+		<property name="publicationTime" value="01/12/2017" />
+		<property name="deadline" value="15/06/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<ref bean="prize1" />
+				<ref bean="prize4" />
+			</list>
+		</property>
+		<property name="manager" ref="manager1" />
+		<property name="comments">
+			<list>
+				<ref bean="comment4" />
+			</list>
+		</property>
+		<property name="bill" ref="bill1" />
+	</bean>
+
+	<bean id="raffle2" class="domain.Raffle">
+		<property name="logo"
+			value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaLvUpwqr_exrRkTKIxVZRyHAjqUmQCOsMmAlmJcDWAyI-jz59" />
+		<property name="title" value="raffle2" />
+		<property name="description" value="description raffle 2" />
+		<property name="publicationTime" value="16/10/2016" />
+		<property name="deadline" value="20/03/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="manager" ref="manager1" />
+
+		<property name="comments">
+			<list>
+				<ref bean="comment5" />
+			</list>
+		</property>
+		<property name="bill" ref="bill2" />
+	</bean>
+
+	<bean id="raffle3" class="domain.Raffle">
+		<property name="logo"
+			value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe9v1DbyjeoV7zZHJipKrDVrQOzLSiTMv4FtEeJKVZVBfYNX3ngA" />
+		<property name="title" value="raffle3" />
+		<property name="description" value="description raffle 3" />
+		<property name="publicationTime" value="16/10/2016" />
+		<property name="deadline" value="20/03/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="manager" ref="manager1" />
+
+		<property name="comments">
+			<list>
+				<ref bean="comment6" />
+			</list>
+		</property>
+		<property name="bill" ref="bill3" />
+	</bean>
+
+	<bean id="raffle4" class="domain.Raffle">
+		<property name="logo"
+			value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqPTPY6CKsnp3uYBljc3AUR8pNW4u-yPftLPgOJIR8rsVH6hn7" />
+		<property name="title" value="raffle4" />
+		<property name="description" value="description raffle 4" />
+		<property name="publicationTime" value="16/10/2016" />
+		<property name="deadline" value="20/03/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="manager" ref="manager1" />
+
+		<property name="comments">
+			<list>
+				<ref bean="comment7" />
+			</list>
+		</property>
+		<property name="bill" ref="bill4" />
+	</bean>
+
+	<bean id="raffle5" class="domain.Raffle">
+		<property name="logo"
+			value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTMhzHelmv89e9DXahPGh5PrTwwe2cRMab3JeMuQGX32v50ouAlg" />
+		<property name="title" value="raffle5" />
+		<property name="description" value="description raffle 5" />
+		<property name="publicationTime" value="16/10/2016" />
+		<property name="deadline" value="20/03/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="manager" ref="manager2" />
+
+		<property name="comments">
+			<list>
+				<ref bean="comment8" />
+			</list>
+		</property>
+		<property name="bill" ref="bill5" />
+	</bean>
+
+	<bean id="raffle6" class="domain.Raffle">
+		<property name="logo"
+			value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_49qkoBZfBAqZk-GlCTAQq-atW0n2ZtCPseqdo33Ol6JO3TSing" />
+		<property name="title" value="raffle6" />
+		<property name="description" value="description raffle 6" />
+		<property name="publicationTime" value="16/10/2016" />
+		<property name="deadline" value="20/03/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="manager" ref="manager2" />
+		<property name="comments">
+			<list>
+				<ref bean="comment9" />
+			</list>
+		</property>
+		<property name="bill" ref="bill6" />
+	</bean>
+
+	<bean id="raffle7" class="domain.Raffle">
+		<property name="logo"
+			value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsupGPERRPROq6GwAVy01hYIejOXcgktPk0pWW3y98VL3oSLQKKQ" />
+		<property name="title" value="raffle7" />
+		<property name="description" value="description raffle 7" />
+		<property name="publicationTime" value="16/10/2016" />
+		<property name="deadline" value="20/03/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="manager" ref="manager3" />
+		<property name="comments">
+			<list>
+				<ref bean="comment10" />
+			</list>
+		</property>
+		<property name="bill" ref="bill7" />
+	</bean>
+
+	<bean id="raffle8" class="domain.Raffle">
+		<property name="logo"
+			value="https://www.wilottery.com/files/images/logos/games/rafflelogo.png" />
+		<property name="title" value="raffle8" />
+		<property name="description" value="description raffle 8" />
+		<property name="publicationTime" value="16/10/2016" />
+		<property name="deadline" value="20/03/2018" />
+
+		<property name="audits">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="prizes">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="manager" ref="manager3" />
+		<property name="comments">
+			<list>
+				<ref bean="comment11" />
+			</list>
+		</property>
+		<property name="bill" ref="bill8" />
+	</bean>
+
+	<!-- AUDITS -->
+
+	<bean id="audit1" class="domain.Audit">
+		<property name="moment" value="12/10/2016" />
+		<property name="text" value="text audit 1" />
+		<property name="isDraft" value="false" />
+		<property name="auditor" ref="auditor1" />
+		<property name="raffle" ref="raffle1" />
+	</bean>
+
+	<bean id="audit2" class="domain.Audit">
+		<property name="moment" value="12/10/2016" />
+		<property name="text" value="text audit 2" />
+		<property name="isDraft" value="true" />
+		<property name="auditor" ref="auditor1" />
+		<property name="raffle" ref="raffle2" />
+	</bean>
+
+	<bean id="audit3" class="domain.Audit">
+		<property name="moment" value="12/10/2016" />
+		<property name="text" value="text audit 3" />
+		<property name="isDraft" value="true" />
+		<property name="auditor" ref="auditor2" />
+		<property name="raffle" ref="raffle1" />
+	</bean>
+
+	<bean id="audit4" class="domain.Audit">
+		<property name="moment" value="12/10/2016" />
+		<property name="text" value="text audit 4" />
+		<property name="isDraft" value="false" />
+		<property name="auditor" ref="auditor2" />
+		<property name="raffle" ref="raffle2" />
+	</bean>
+
+	<bean id="audit5" class="domain.Audit">
+		<property name="moment" value="12/10/2016" />
+		<property name="text" value="text audit 5" />
+		<property name="isDraft" value="true" />
+		<property name="auditor" ref="auditor3" />
+		<property name="raffle" ref="raffle1" />
+	</bean>
+
+	<!-- PRIZES -->
+
+	<bean id="prize1" class="domain.Prize">
+		<property name="name" value="Maldives" />
+		<property name="description" value="A dream par-adise on earth" />
+		<property name="codesGenerated" value="4" />
+		<property name="winnerCodes" value="1" />
+		<property name="raffle" ref="raffle1" />
+		<property name="codes">
+			<list>
+				<ref bean="code1" />
+				<ref bean="code2" />
+				<ref bean="code3" />
+				<ref bean="code4" />
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property1" />
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<ref bean="comment12" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="prize2" class="domain.Prize">
+		<property name="name" value="prize 2" />
+		<property name="description" value="description prize 2" />
+		<property name="codesGenerated" value="8" />
+		<property name="winnerCodes" value="5" />
+		<property name="raffle" ref="raffle2" />
+		<property name="codes">
+			<list>
+				<ref bean="code9" />
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+				<ref bean="property1" />
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<ref bean="comment13" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="prize3" class="domain.Prize">
+		<property name="name" value="prize 3" />
+		<property name="description" value="description prize 3" />
+		<property name="codesGenerated" value="7" />
+		<property name="winnerCodes" value="3" />
+		<property name="raffle" ref="raffle3" />
+		<property name="codes">
+			<list>
+				<ref bean="code10" />
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+				<ref bean="comment14" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="prize4" class="domain.Prize">
+		<property name="name" value="Tanzania" />
+		<property name="description" value="An adventurer’s dream made true" />
+		<property name="codesGenerated" value="4" />
+		<property name="winnerCodes" value="1" />
+		<property name="raffle" ref="raffle1" />
+		<property name="codes">
+			<list>
+				<ref bean="code5" />
+				<ref bean="code6" />
+				<ref bean="code7" />
+				<ref bean="code8" />
+			</list>
+		</property>
+		<property name="properties">
+			<list>
+				<!-- <ref bean="" /> -->
+			</list>
+		</property>
+		<property name="comments">
+			<list>
+			</list>
+		</property>
+	</bean>
+
+	<!-- PROPERTIES -->
+
+	<bean id="property1" class="domain.Property">
+		<property name="name" value="property1" />
+		<property name="prizes">
+			<list>
+				<ref bean="prize1" />
+				<ref bean="prize2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="property2" class="domain.Property">
+		<property name="name" value="property2" />
+		<property name="prizes">
+			<list>
+				<ref bean="prize1" />
+				<ref bean="prize3" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="property3" class="domain.Property">
+		<property name="name" value="property3" />
+		<property name="prizes">
+			<list>
+
+			</list>
+		</property>
+	</bean>
+
+	<!-- CODES -->
+
+	<bean id="code1" class="domain.Code">
+		<property name="name" value="MALD-IVES" />
+		<property name="winner" value="false" />
+		<property name="prize" ref="prize1" />
+	</bean>
+
+	<bean id="code2" class="domain.Code">
+		<property name="name" value="JULY-2019" />
+		<property name="winner" value="false" />
+		<property name="prize" ref="prize1" />
+	</bean>
+
+	<bean id="code3" class="domain.Code">
+		<property name="name" value="LETS-GO2G" />
+		<property name="winner" value="false" />
+		<property name="prize" ref="prize1" />
+	</bean>
+
+	<bean id="code4" class="domain.Code">
+		<property name="name" value="4500-EURO" />
+		<property name="winner" value="true" />
+		<property name="prize" ref="prize1" />
+	</bean>
+
+	<bean id="code5" class="domain.Code">
+		<property name="name" value="TANZ-ANIA" />
+		<property name="winner" value="false" />
+		<property name="prize" ref="prize4" />
+	</bean>
+
+	<bean id="code6" class="domain.Code">
+		<property name="name" value="DECX-2018" />
+		<property name="winner" value="false" />
+		<property name="prize" ref="prize4" />
+	</bean>
+
+	<bean id="code7" class="domain.Code">
+		<property name="name" value="LETS-GO2G" />
+		<property name="winner" value="false" />
+		<property name="prize" ref="prize4" />
+	</bean>
+
+	<bean id="code8" class="domain.Code">
+		<property name="name" value="BEMY-BAIT" />
+		<property name="winner" value="true" />
+		<property name="prize" ref="prize4" />
+	</bean>
+
+	<bean id="code9" class="domain.Code">
+		<property name="name" value="LK09-34ED" />
+		<property name="winner" value="false" />
+		<property name="moment" value="19/10/2016 10:00" />
+		<property name="prize" ref="prize2" />
+		<property name="user" ref="user1" />
+	</bean>
+
+	<bean id="code10" class="domain.Code">
+		<property name="name" value="12WS-12W3" />
+		<property name="winner" value="true" />
+		<property name="moment" value="05/11/2016 10:00" />
+		<property name="prize" ref="prize3" />
+		<property name="user" ref="user1" />
+	</bean>
+
+
+	<!-- SPAM KEYWORD -->
+
+	<bean id="spamkeyword" class="domain.SpamKeyword">
+		<property name="keyword" value="spam" />
+	</bean>
+
+	<!-- COMMENTS -->
+
+	<bean id="comment1" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment1 war" />
+		<property name="score" value="2" />
+		<property name="actor" ref="user2" />
+		<property name="comentable" ref="user1" />
+	</bean>
+
+	<bean id="comment2" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment2thief" />
+		<property name="score" value="2" />
+		<property name="actor" ref="manager1" />
+		<property name="comentable" ref="user2" />
+	</bean>
+
+	<bean id="comment3" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment3 guerra" />
+		<property name="score" value="1" />
+		<property name="actor" ref="auditor1" />
+		<property name="comentable" ref="user3" />
+	</bean>
+
+	<bean id="comment4" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment4" />
+		<property name="score" value="3" />
+		<property name="actor" ref="auditor1" />
+		<property name="comentable" ref="raffle1" />
+	</bean>
+
+	<bean id="comment5" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment5" />
+		<property name="score" value="3" />
+		<property name="actor" ref="user1" />
+		<property name="comentable" ref="raffle2" />
+	</bean>
+
+	<bean id="comment6" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment6" />
+		<property name="score" value="3" />
+		<property name="actor" ref="manager1" />
+		<property name="comentable" ref="raffle3" />
+	</bean>
+
+	<bean id="comment7" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment7" />
+		<property name="score" value="3" />
+		<property name="actor" ref="user1" />
+		<property name="comentable" ref="raffle4" />
+	</bean>
+
+	<bean id="comment8" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment8" />
+		<property name="score" value="3" />
+		<property name="actor" ref="manager1" />
+		<property name="comentable" ref="raffle5" />
+	</bean>
+
+	<bean id="comment9" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment9" />
+		<property name="score" value="1" />
+		<property name="actor" ref="auditor1" />
+		<property name="comentable" ref="raffle6" />
+	</bean>
+
+	<bean id="comment10" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment10" />
+		<property name="score" value="2" />
+		<property name="actor" ref="auditor1" />
+		<property name="comentable" ref="raffle7" />
+	</bean>
+
+	<bean id="comment11" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment11" />
+		<property name="score" value="3" />
+		<property name="actor" ref="user1" />
+		<property name="comentable" ref="raffle8" />
+	</bean>
+
+	<bean id="comment12" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment12" />
+		<property name="score" value="3" />
+		<property name="actor" ref="manager1" />
+		<property name="comentable" ref="prize1" />
+	</bean>
+
+	<bean id="comment13" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment13" />
+		<property name="score" value="3" />
+		<property name="actor" ref="auditor1" />
+		<property name="comentable" ref="prize2" />
+	</bean>
+
+	<bean id="comment14" class="domain.Comment">
+		<property name="createMoment" value="01/01/2017 00:00" />
+		<property name="text" value="comment14" />
+		<property name="score" value="1" />
+		<property name="actor" ref="auditor1" />
+		<property name="comentable" ref="prize3" />
+	</bean>
+
+	<!-- FOLDERS <bean id="inbox1" class="domain.Folder"> <property name="name" 
+		value="inbox" /> <property name="isSystem" value="true" /> <property name="messages"> 
+		<list> <ref bean="" /> </list> </property> <property name="actor" ref="admin" 
+		/> </bean> <bean id="outbox1" class="domain.Folder"> <property name="name" 
+		value="outbox" /> <property name="isSystem" value="true" /> <property name="messages"> 
+		<list> <ref bean="message1" /> </list> </property> <property name="actor" 
+		ref="admin" /> </bean> <bean id="spambox1" class="domain.Folder"> <property 
+		name="name" value="spam" /> <property name="isSystem" value="true" /> <property 
+		name="messages"> <list> <ref bean="" /> </list> </property> <property name="actor" 
+		ref="admin" /> </bean> <bean id="trashbox1" class="domain.Folder"> <property 
+		name="name" value="trashbox" /> <property name="isSystem" value="true" /> 
+		<property name="messages"> <list> <ref bean="" /> </list> </property> <property 
+		name="actor" ref="admin" /> </bean> <bean id="inbox2" class="domain.Folder"> 
+		<property name="name" value="inbox" /> <property name="isSystem" value="true" 
+		/> <property name="messages"> <list> <ref bean="" /> </list> </property> 
+		<property name="actor" ref="customer" /> </bean> <bean id="outbox2" class="domain.Folder"> 
+		<property name="name" value="outbox" /> <property name="isSystem" value="true" 
+		/> <property name="messages"> <list> </list> </property> <property name="actor" 
+		ref="customer" /> </bean> <bean id="spambox2" class="domain.Folder"> <property 
+		name="name" value="spam" /> <property name="isSystem" value="true" /> <property 
+		name="messages"> <list> <ref bean="" /> </list> </property> <property name="actor" 
+		ref="customer" /> </bean> <bean id="trashbox2" class="domain.Folder"> <property 
+		name="name" value="trashbox" /> <property name="isSystem" value="true" /> 
+		<property name="messages"> <list> <ref bean="" /> </list> </property> <property 
+		name="actor" ref="customer" /> </bean> SPAMS <bean id="spam1" class="domain.Spam"> 
+		<property name="keywords" value="viagra" /> </bean> <bean id="spam2" class="domain.Spam"> 
+		<property name="keywords" value="cialis" /> </bean> <bean id="spam3" class="domain.Spam"> 
+		<property name="keywords" value="sex" /> </bean> <bean id="spam4" class="domain.Spam"> 
+		<property name="keywords" value="love" /> </bean> MESSAGES <bean id="message1" 
+		class="domain.Message"> <property name="moment" value="2016/10/22" /> <property 
+		name="subject" value="subject1" /> <property name="body" value="body1" /> 
+		<property name="priority" value="NEUTRAL" /> <property name="folder" ref="outbox1" 
+		/> <property name="send" ref="admin" /> <property name="receives"> <list> 
+		<ref bean="admin" /> </list> </property> </bean> -->
+
+
+	<!-- CONFIGURATIONSYSTEM -->
+	<bean id="configurationSystem" class="domain.ConfigurationSystem">
+		<property name="banner" value="http://i66.tinypic.com/28l4cx.jpg" />
+		<property name="taxes" value="99.95" />
+	</bean>
+
+
+	<!-- TABOO WORDS -->
+
+	<bean id="tabooWord1" class="domain.TabooWord">
+		<property name="name" value="sex" />
+	</bean>
+
+	<bean id="tabooWord2" class="domain.TabooWord">
+		<property name="name" value="sexo" />
+	</bean>
+
+	<bean id="tabooWord3" class="domain.TabooWord">
+		<property name="name" value="viagra" />
+	</bean>
+
+	<bean id="tabooWord4" class="domain.TabooWord">
+		<property name="name" value="cialis" />
+	</bean>
+
+	<bean id="tabooWord5" class="domain.TabooWord">
+		<property name="name" value="ladron" />
+	</bean>
+
+	<bean id="tabooWord6" class="domain.TabooWord">
+		<property name="name" value="thief" />
+	</bean>
+
+	<bean id="tabooWord7" class="domain.TabooWord">
+		<property name="name" value="guerra" />
+	</bean>
+
+	<bean id="tabooWord8" class="domain.TabooWord">
+		<property name="name" value="war" />
+	</bean>
+
+	<bean id="tabooWord9" class="domain.TabooWord">
+		<property name="name" value="matar" />
+	</bean>
+
+	<bean id="tabooWord10" class="domain.TabooWord">
+		<property name="name" value="kill" />
+	</bean>
+
+	<bean id="tabooWord11" class="domain.TabooWord">
+		<property name="name" value="zorra" />
+	</bean>
+
+	<bean id="tabooWord12" class="domain.TabooWord">
+		<property name="name" value="puta" />
+	</bean>
+
+	<bean id="tabooWord13" class="domain.TabooWord">
+		<property name="name" value="guarra" />
+	</bean>
+
+	<bean id="tabooWord14" class="domain.TabooWord">
+		<property name="name" value="puto" />
+	</bean>
+
+	<bean id="tabooWord15" class="domain.TabooWord">
+		<property name="name" value="cabron" />
+	</bean>
+
+	<bean id="tabooWord16" class="domain.TabooWord">
+		<property name="name" value="bitch" />
+	</bean>
+
+	<bean id="tabooWord17" class="domain.TabooWord">
+		<property name="name" value="slut" />
+	</bean>
+
+	<bean id="tabooWord18" class="domain.TabooWord">
+		<property name="name" value="nigga" />
+	</bean>
+
+	<bean id="tabooWord19" class="domain.TabooWord">
+		<property name="name" value="asshole" />
+	</bean>
+
+	<bean id="tabooWord20" class="domain.TabooWord">
+		<property name="name" value="shit" />
+	</bean>
+
+	<!-- BILLS -->
+
+	<bean id="bill1" class="domain.Bill">
+		<property name="name" value="Bill 1" />
+		<property name="payMoment" value="01/01/2017 00:00" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle1" />
+	</bean>
+
+	<bean id="bill2" class="domain.Bill">
+		<property name="name" value="Bill 2" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle2" />
+	</bean>
+
+	<bean id="bill3" class="domain.Bill">
+		<property name="name" value="Bill 3" />
+		<property name="payMoment" value="01/01/2017 00:00" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle3" />
+	</bean>
+
+	<bean id="bill4" class="domain.Bill">
+		<property name="name" value="Bill 4" />
+		<property name="payMoment" value="01/01/2018 00:00" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle4" />
+	</bean>
+
+	<bean id="bill5" class="domain.Bill">
+		<property name="name" value="Bill 5" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle5" />
+	</bean>
+
+	<bean id="bill6" class="domain.Bill">
+		<property name="name" value="Bill 6" />
+		<property name="payMoment" value="01/01/2018 00:00" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle6" />
+	</bean>
+
+	<bean id="bill7" class="domain.Bill">
+		<property name="name" value="Bill 7" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle7" />
+	</bean>
+
+	<bean id="bill8" class="domain.Bill">
+		<property name="name" value="Bill 8" />
+		<property name="price" value="99.95" />
+		<property name="paid" value="false" />
+		<property name="raffle" ref="raffle8" />
+	</bean>
+
+	<!-- CREDIT CARD -->
+	<bean id="creditCard1" class="domain.CreditCard">
+		<property name="holderName" value="customer1" />
+		<property name="brandName" value="VISA" />
+		<property name="number" value="4556552828947945" />
+		<property name="expirationMonth" value="12" />
+		<property name="expirationYear" value="2018" />
+		<property name="CVV" value="243" />
+		<property name="actor" ref="manager1" />
+	</bean>
+
+	<bean id="creditCard2" class="domain.CreditCard">
+		<property name="holderName" value="customer2" />
+		<property name="brandName" value="VISA" />
+		<property name="number" value="4556906155913088" />
+		<property name="expirationMonth" value="4" />
+		<property name="expirationYear" value="2022" />
+		<property name="CVV" value="366" />
+		<property name="actor" ref="manager2" />
+	</bean>
+</beans>

@@ -1,0 +1,36 @@
+raffle.logo				= Logo
+raffle.title			= Título
+raffle.description		= Descripcion
+raffle.publicationTime	= Fecha de publicación
+raffle.deadline			= Fecha límite
+
+raffle.display			= Ver
+
+raffle.save.error		= No se puede completar su operación. Revise que esta rifa haya comenzado.
+raffle.delete.error		= No se puede borrar esta rifa. Es posible que esta rifa haya comenzado.
+raffle.confirm.delete	= ¿Estás seguro que quiere borrar esta rifa?
+
+raffle.create			= Crear una nueva rifa
+raffle.edit				= Editar
+raffle.save				= Guardar
+raffle.delete			= Borrar
+raffle.cancel			= Cancelar
+
+comentable.ratioStars			= Media de estrellas
+comment.title 					= Titulo
+comment.text 					= Texto
+comment.stars			 		= Estrellas
+comment.userName 				= Nombre de usuario
+
+createPrize				= Crear un premio
+
+raffle.enterCode		= Introducir codigo
+
+listPrizeByRaffle		= Premios
+search.keyword			= Keyword
+search					= Buscar
+
+raffle.createAudit		= Crear nuevo informe de auditoría
+raffle.deadline.error	= La fecha límite no puede ser anterior a la fecha de publicación
+raffle.publicationTime.error = La fecha de publicación no puede ser anterior a la fecha de publicación
+raffle.publicationTime.error.2 = La fecha de publicación debe ser futura

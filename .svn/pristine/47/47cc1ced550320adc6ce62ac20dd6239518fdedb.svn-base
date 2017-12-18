@@ -1,0 +1,20 @@
+bill.name					= Name
+bill.payMoment				= Pay moment
+bill.price					= Price
+bill.raffle					= Raffle
+bill.manager				= Manager
+bill.paid					= Paid
+bill.not.paid				= Not paid
+pay.bill					= Pay
+bill.save					= Save	
+bill.cancell				= Cancel
+compute.input				= Input
+bill.compute				= Compute
+bill.computeDate			= Compute date
+
+lastCompute					= Last compute
+bill.commit.error			= The introduced value is invalid
+bill.sure.pay				= You will pay with the credit card you have registered at this time. Are you sure to continue?
+bill.error.creditCard		= Check that your credit card is valid.
+bill.payMoment.info			= Remember that you have already computed bills until the date shown in -Last compute-. Are you sure you to continue?
+bill.test					= Hello

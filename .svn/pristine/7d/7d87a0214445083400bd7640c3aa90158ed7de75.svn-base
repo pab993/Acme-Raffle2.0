@@ -1,0 +1,29 @@
+# messages.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+actorRegister.accountData				= Data of the new account
+actorRegister.username					= User name
+actorRegister.password					= Password
+actorRegister.repeatPassword			= Repeat password
+actorRegister.personalData				= Personal data
+actorRegister.name						= Name
+actorRegister.surname					= Surname
+actorRegister.phone						= Phone number
+actorRegister.email						= E-mail
+actorRegister.postalAddress				= Postal Address
+actorRegister.accept					= Accept
+actorRegister.lopd						= Terms and conditions
+actorRegister.submit					= Register
+
+actorRegister.password.mismatch			= Passwords cannot be blank and must match
+actorRegister.postalAddress.error		= The pattern of the postal address is not correct
+actorRegister.phone.error				= The pattern of the phone is not correct
+actorRegister.save.error				= Cannot commit this operation
+
+phone.ask							= This phone number doesnt match with the recommended pattern. Do you really want to enter this value?
+actorRegister.username.unique			= The username must be unique

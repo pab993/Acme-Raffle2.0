@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+	
+	<definition name="code/myList" extends="master.page">	
+		<put-attribute name="title" value="List of codes" />
+		<put-attribute name="body" value="/views/code/myList.jsp" />
+	</definition>
+	
+	<definition name="code/enter" extends="master.page">	
+		<put-attribute name="title" value="Enter a code" />
+		<put-attribute name="body" value="/views/code/enter.jsp" />
+	</definition>
+	
+	<definition name="code/edit" extends="master.page">	
+		<put-attribute name="title" value="Edit code" />
+		<put-attribute name="body" value="/views/code/edit.jsp" />
+	</definition>
+		
+</tiles-definitions>

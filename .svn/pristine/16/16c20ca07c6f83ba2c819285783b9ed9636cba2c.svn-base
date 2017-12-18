@@ -1,0 +1,33 @@
+code.name			= Codigo
+code.win			= Ganador
+code.moment			= Momento
+code.user			= Usuario
+code.prize			= Premio
+
+code.raffle			= Rifas		
+
+code.enter			= Introducir un codigo
+
+code.notFound		= Codigo invalido 
+code.winner			= ¡Codigo ganador! ¡Has ganado el premio, enhorabuena!
+code.winnerYet		= Ya habias introducido este codigo ganador antes
+code.otherWinner	= Otro usuario ha introducido ya este codigo ganador
+code.notWinner		= ¡Codigo valido! ¡Pero este codigo no tiene premio!
+code.notWinnerYet	= Ya habias introducido este codigo antes
+code.otherNotWinner	= Otro usuario ha introducido ya este codigo
+
+code.submit			= Introducir
+code.save 			= Guardar
+code.delete			= Delete
+code.cancel			= Cancelar
+
+code.commit.error	= Error
+code.edit			= Editar
+
+code.question.win	= ¿Código ganador?
+code.no.win			= No ganador
+code.yes.win        = Ganador
+
+code.confirm.delete = ¿Estás seguro de eliminar este código?
+code.name.exist.error = Este código ya existe en este premio
+code.name.taboo.error = Este código contiene una palabra prohibida

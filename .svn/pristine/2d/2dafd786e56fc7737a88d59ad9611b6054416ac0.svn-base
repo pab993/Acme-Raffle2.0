@@ -1,0 +1,35 @@
+prize.name				= Nombre
+prize.description		= Descripcion
+prize.codesGenerated	= Nº de códigos a generar
+prize.winnerCodes		= Nº de códigos ganadores
+
+prize.save.error		= No se puede completar su operación. Recuerde que una vez comenzada la rifa, no es posible modificar su/s premio/s y que el nº de códigos a generar debe de ser mayor que el nº de códigos ganadores.
+prize.delete.error		= No se puede borrar este premio. Recuerde que una vez comenzada la rifa, no es posible borrar su/s premio/s.
+prize.confirm.delete	= ¿Estás seguro que quiere borrar este premio?
+
+prize.regenerateCode	= Regenerar códigos
+	
+comentable.ratioStars			= Media de estrellas
+comment.title 					= Titulo
+comment.text 					= Texto
+comment.stars			 		= Estrellas
+comment.userName 				= Nombre de usuario	
+
+prize.codes				= Codigos	
+prize.display			= Ver
+prize.create			= Crear una nuevo premio
+prize.edit				= Editar
+prize.save				= Guardar
+prize.delete			= Borrar
+prize.cancel			= Cancelar
+prize.properties		= Propiedades
+prize.addProperties		= Añadir Propiedades
+prize.codeForm			= Introducir Codigo
+prize.enterCode			= Codigo
+
+listCodeByPrizeAndUser 	= Codigos
+enterACode				= Introducir codigo
+
+property.name			= Nombre
+createPrize				= Crear premio
+prize.raffle.enterCode	= Introducir código

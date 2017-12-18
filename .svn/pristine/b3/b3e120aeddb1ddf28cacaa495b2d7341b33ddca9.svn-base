@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- 
+ * tiles.xml
+ *
+ * Copyright (C) 2017 Universidad de Sevilla
+ * 
+ * The use of this project is hereby constrained to the conditions of the 
+ * TDG Licence, a copy of which you may download from 
+ * http://www.tdg-seville.info/License.html
+ -->
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+
+	<definition name="actor/seeProfile" extends="master.page">	
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/views/actor/seeProfile.jsp" />
+	</definition>
+	
+	<definition name="actor/editProfile" extends="master.page">	
+		<put-attribute name="title" value="Profile" />
+		<put-attribute name="body" value="/views/actor/editProfile.jsp" />
+	</definition>
+	
+	<definition name="actor/registerUser" extends="master.page">	
+		<put-attribute name="title" value="User Data Register" />
+		<put-attribute name="body" value="/views/actor/registerUser.jsp" />
+	</definition>
+	
+	<definition name="actor/registerManager" extends="master.page">	
+		<put-attribute name="title" value="Manager Data Register" />
+		<put-attribute name="body" value="/views/actor/registerManager.jsp" />
+	</definition>
+			
+	<definition name="actor/registerAuditor" extends="master.page">	
+		<put-attribute name="title" value="Auditor Data Register" />
+		<put-attribute name="body" value="/views/actor/registerAuditor.jsp" />
+	</definition>
+	
+</tiles-definitions>

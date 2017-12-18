@@ -1,0 +1,56 @@
+# messages_es.properties
+#
+# Copyright (C) 2017 Universidad de Sevilla
+# 
+# The use of this project is hereby constrained to the conditions of the 
+# TDG Licence, a copy of which you may download from 
+# http://www.tdg-seville.info/License.html
+
+master.page.administrator			= Administrador
+master.page.administrator.action.1	= Acción 1
+master.page.administrator.action.2	= Acción 2
+
+master.page.customer				= Cliente
+master.page.customer.action.1		= Acción 1
+master.page.customer.action.2		= Acción 2
+
+master.page.profile 				= Perfil
+master.page.profile.action.1 		= Acción 1
+master.page.profile.action.2		= Acción 2
+master.page.profile.action.3		= Acción 3
+
+master.page.enterCode				= Introducir codigo
+
+master.page.listRaffleByUser		= Mis Sorteos
+
+master.page.login 					= Entrar
+master.page.register.actorRegisterManager	= Register Manager
+master.page.register.actorRegisterUser	= Register User
+master.page.register.actorRegisterAuditor	= Registrar Auditor
+master.page.logout 					= Salir
+
+master.page.actor.profile			= Ver Perfil
+master.page.mailbox                	= Correo
+master.page.socialIdentity			= Identidades sociales
+master.page.dashboard				= Dashboard
+master.page.property				= Propiedades
+master.page.tabooWord				= Palabras tabu	
+
+configurationSystem					= Configuración del sistema
+
+master.page.eraseMe					= Información sobre datos personales
+master.page.mostrarBarraCookies		= Cookies
+master.page.barraCookies1			= Se hace uso de las cookies JSESSIONID y LANGUAGE
+master.page.barraCookies2			= Más información
+
+master.page.myListRaffle			= Mis rifas
+master.page.browse.raffle			= Rifas
+master.page.home					= Inicio
+master.page.browse.user				= Usuarios
+master.page.list.prizes				= Premios
+master.page.comment.inappropiate	= Comentarios inapropiados
+
+master.page.myList.audit			= Mis auditorías
+master.page.creditCard.edit			= Tarjeta de crédito
+master.page.bill					= Facturas
+master.page.browse.manager.debtor	= Morosos

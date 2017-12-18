@@ -1,0 +1,16 @@
+audit.moment			= Moment
+audit.text			= Text
+
+audit.save.error		= Can't complete your action. Check that this audit is draft.
+audit.delete.error	= You can not delete this audit. It's possible that this audit isn't draft.
+audit.confirm.delete	= Are you sure you wish to delete this audit?
+audit.changeDraft.error = This audit can not be formalized. Check that this audit is draft.
+
+audit.create			= Create a new audit
+audit.edit			= Edit
+audit.save			= Save
+audit.delete			= Delete
+audit.cancel			= Cancel
+
+audit.changeDraft		= Formalize audit
+audit.raffle			= Raffle

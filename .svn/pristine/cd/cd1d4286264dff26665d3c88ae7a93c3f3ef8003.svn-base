@@ -1,0 +1,50 @@
+
+package domain;
+
+import java.util.Collection;
+
+import javax.persistence.Access;
+import javax.persistence.AccessType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.validation.Valid;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.SafeHtml;
+import org.hibernate.validator.constraints.SafeHtml.WhiteListType;
+
+@Entity
+@Access(AccessType.PROPERTY)
+public class Property extends DomainEntity {
+
+	private String	name;
+
+
+	@NotBlank
+	@SafeHtml(whitelistType = WhiteListType.NONE)
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	//Relationships
+	// =======================================================	
+
+	private Collection<Prize>	prizes;
+
+
+	@Valid
+	@ManyToMany
+	public Collection<Prize> getPrizes() {
+		return prizes;
+	}
+
+	public void setPrizes(Collection<Prize> prizes) {
+		this.prizes = prizes;
+	}
+
+}

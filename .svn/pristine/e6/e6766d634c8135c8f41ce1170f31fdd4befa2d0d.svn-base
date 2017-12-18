@@ -1,0 +1,13 @@
+manager.name			= Nombre
+manager.surname			= Apellidos
+manager.email			= Email
+manager.phone			= Teléfono
+manager.enabled			= Habilitado
+
+manager.ban				= Prohibir
+manager.unban			= Permitir
+
+admin.error.ban			= No puedes bloquear a este gestor
+admin.errorDefault		= Error
+
+
